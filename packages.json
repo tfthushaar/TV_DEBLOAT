@@ -1,0 +1,146 @@
+{
+  "device": {
+    "brand": "SANYO",
+    "model": "ATV R1",
+    "android": "9",
+    "sdk": 28,
+    "platform": "rtd284o",
+    "ramTotalKB": 1572864,
+    "note": "Package list built from a real `pm list packages` of this TV, not from the original brief. pssKB is the resident memory of the running process at snapshot time."
+  },
+  "replacementLauncher": {
+    "package": "com.spocky.projengmenu",
+    "name": "Projectivy Launcher"
+  },
+  "packages": [
+    {
+      "name": "com.google.android.tvlauncher",
+      "tier": 1,
+      "requiresLauncher": true,
+      "pssKB": 76487,
+      "reason": "Stock Android TV home screen, replaced by Projectivy.",
+      "effect": "Stock home screen and its rows are gone."
+    },
+    {
+      "name": "com.google.android.tvrecommendations",
+      "tier": 1,
+      "requiresLauncher": true,
+      "pssKB": 17778,
+      "reason": "Recommendation / promoted-content service that only feeds the stock home screen.",
+      "effect": "No recommendation rows (there is no stock home to show them)."
+    },
+    {
+      "name": "com.google.android.backdrop",
+      "tier": 1,
+      "requiresLauncher": false,
+      "pssKB": 53636,
+      "reason": "Ambient-mode screensaver process.",
+      "effect": "Google screensaver no longer runs; the Screen saver setting may be empty."
+    },
+    {
+      "name": "com.google.android.marvin.talkback",
+      "tier": 1,
+      "requiresLauncher": false,
+      "pssKB": 15162,
+      "reason": "TalkBack screen reader, running in the background.",
+      "effect": "Screen reader unavailable. Re-enable it if anyone needs accessibility speech."
+    },
+    {
+      "name": "com.google.android.katniss",
+      "tier": 1,
+      "requiresLauncher": false,
+      "pssKB": 51181,
+      "reason": "Google Assistant / voice search. Owner confirmed the voice button is not used.",
+      "effect": "Remote microphone button and in-app voice search stop working."
+    },
+
+    {
+      "name": "com.google.android.tungsten.setupwraith",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": 17853,
+      "reason": "Google setup wizard, still resident after setup.",
+      "effect": "Adding a Google account from Settings may fail. Test after disabling. A factory reset restores it."
+    },
+    {
+      "name": "com.google.android.play.games",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Dormant Google Play Games.",
+      "effect": "None expected. Saves storage and clutter, not RAM."
+    },
+    {
+      "name": "com.google.android.videos",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Dormant Google Play Movies & TV.",
+      "effect": "Play Movies purchases not playable from this TV."
+    },
+    {
+      "name": "com.google.android.youtube.tvmusic",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Dormant YouTube Music app.",
+      "effect": "YouTube Music app unavailable."
+    },
+    {
+      "name": "com.google.android.music",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Google Play Music, discontinued service.",
+      "effect": "None; the service no longer exists."
+    },
+    {
+      "name": "com.google.android.tv.bugreportsender",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Sends bug reports to Google.",
+      "effect": "Bug-report sharing unavailable."
+    },
+    {
+      "name": "com.google.android.feedback",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Google feedback / crash report agent.",
+      "effect": "Feedback and crash reports are not sent."
+    },
+    {
+      "name": "in.startv.hotstar",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "Hotstar. Owner does not use it.",
+      "effect": "App hidden and stopped. Data is kept; re-enable to use it again."
+    },
+    {
+      "name": "com.graymatrix.did",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "ZEE5. Owner does not use it.",
+      "effect": "App hidden and stopped. Data is kept; re-enable to use it again."
+    },
+    {
+      "name": "com.jio.media.stb.ondemand",
+      "tier": 2,
+      "requiresLauncher": false,
+      "pssKB": null,
+      "reason": "JioCinema. Owner does not use it.",
+      "effect": "App hidden and stopped. Data is kept; re-enable to use it again."
+    }
+  ],
+  "neverTouch": [
+    "android", "com.android.systemui", "com.android.tv.settings", "com.realtek.tv.settings",
+    "com.google.android.gms", "com.google.android.gsf", "com.android.vending",
+    "com.google.android.packageinstaller", "com.google.android.webview",
+    "com.google.android.apps.mediashell", "com.apps.ota", "com.apps.authota",
+    "com.netflix.ninja", "com.amazon.amazonvideo.livingroom", "com.google.android.youtube.tv",
+    "com.spocky.projengmenu"
+  ]
+}
